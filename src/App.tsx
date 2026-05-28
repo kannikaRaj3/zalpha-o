@@ -15,7 +15,6 @@ import {
   Layers, 
   ArrowUpRight 
 } from "lucide-react"
-import humanoidNeonArt from "@/assets/humanoid_neon_art.png"
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
