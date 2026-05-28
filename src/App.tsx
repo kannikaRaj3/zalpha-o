@@ -42,11 +42,11 @@ export default function App() {
       />
 
       {/* WebGL generative canvas background */}
-      <div className="fixed inset-0 z-0 opacity-80 pointer-events-none">
+      <div className="fixed inset-0 z-0 opacity-100 pointer-events-none">
         <WebGLShader />
         {/* Dark vignette overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303] opacity-90" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#030303_100%)] opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303] opacity-30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#030303_100%)] opacity-20" />
       </div>
 
       {/* Neon Glow Spots */}
@@ -159,26 +159,9 @@ export default function App() {
       {/* Main Fullscreen Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 px-4 md:px-8 z-10 max-w-7xl mx-auto">
         
-        {/* Floating Glowing Humanoid Visual Container */}
-        <div className="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[340px] md:max-w-[480px] aspect-[4/5] pointer-events-none select-none z-0 animate-pulse-slow">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-transparent z-10" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_20%,#030303_85%)] z-10" />
-          <img 
-            src={humanoidNeonArt} 
-            alt="Zalpha-O Glowing Humanoid Avatar" 
-            className="w-full h-full object-cover object-center rounded-3xl opacity-75 mix-blend-screen scale-105"
-            onError={(e) => {
-              // Fallback if image copying had minor delay
-              e.currentTarget.style.display = 'none';
-            }}
-          />
-          {/* Subtle neon glowing halo */}
-          <div className="absolute inset-10 rounded-full border border-purple-500/25 blur-md animate-ping-slow pointer-events-none" />
-        </div>
-
         {/* Center luxury layout frame */}
-        <div className="relative border border-white/10 p-2 w-full max-w-3xl mx-auto rounded-xl glassmorphism-card z-10">
-          <main className="relative border border-white/5 py-12 px-6 md:py-16 md:px-12 overflow-hidden rounded-lg bg-black/60 text-center">
+        <div className="relative p-2 w-full max-w-3xl mx-auto z-10">
+          <main className="relative py-12 px-6 md:py-16 md:px-12 text-center rounded-2xl bg-white/[0.03] backdrop-blur-[2px] border border-white/5">
             
             {/* Live Indicator */}
             <div className="mb-6 flex items-center justify-center gap-2">

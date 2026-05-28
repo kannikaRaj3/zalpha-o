@@ -207,11 +207,11 @@ const colorVariants: Record<
     textShadow: "[text-shadow:_0_-1px_0_rgb(80_80_80_/_100%)]",
   },
   primary: {
-    outer: "bg-gradient-to-b from-[#000] to-[#A0A0A0]",
-    inner: "bg-gradient-to-b from-primary via-secondary to-muted",
-    button: "bg-gradient-to-b from-primary to-primary/40",
-    textColor: "text-white",
-    textShadow: "[text-shadow:_0_-1px_0_rgb(30_58_138_/_100%)]",
+    outer: "bg-gradient-to-b from-blue-900 to-black",
+    inner: "bg-gradient-to-b from-blue-950 via-black to-blue-900",
+    button: "bg-gradient-to-b from-[#001a4d] to-black",
+    textColor: "text-blue-400 text-glow-blue",
+    textShadow: "[text-shadow:_0_0_8px_rgba(59,130,246,0.8),_0_-1px_0_rgb(0_0_0_/_100%)]",
   },
   success: {
     outer: "bg-gradient-to-b from-[#005A43] to-[#7CCB9B]",

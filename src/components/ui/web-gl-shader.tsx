@@ -72,7 +72,7 @@ export function WebGLShader() {
         time: { value: 0.0 },
         xScale: { value: 1.0 },
         yScale: { value: 0.5 },
-        distortion: { value: 0.05 },
+        distortion: { value: 0.0 },
       }
 
       const position = [
