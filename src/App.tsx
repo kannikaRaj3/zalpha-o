@@ -506,6 +506,17 @@ export default function App() {
         </div>
       </section>
 
+      {/* Calendly Consultation Block */}
+      <div className="flex justify-center -mb-14 relative z-20">
+        <MetalButton 
+          variant="primary" 
+          onClick={() => (window as any).Calendly?.showPopupWidget('https://calendly.com/kannikaraj/30min')}
+          className="text-[10px] uppercase tracking-[0.2em] font-bold h-11 px-10 border-purple-500/30 bg-black/80 backdrop-blur-md hover:bg-purple-500/10 shadow-[0_0_20px_rgba(168,85,247,0.15)] transition-all duration-300"
+        >
+          Schedule Neural Consultation
+        </MetalButton>
+      </div>
+
       {/* Subscription/Portal Access Access Block */}
       <section id="portal" className="relative py-28 px-4 md:px-8 z-10 max-w-7xl mx-auto border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center border border-white/10 rounded-2xl p-8 md:p-12 glassmorphism-card bg-black/60 relative overflow-hidden">
@@ -515,7 +526,7 @@ export default function App() {
 
           <div className="relative z-10 space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-              Request <span className="font-brand-accent italic text-glow-purple">System Access</span>
+              <span className="font-brand-accent italic text-glow-purple">System Access</span>
             </h2>
             
             <p className="text-zinc-400 text-xs md:text-sm max-w-lg mx-auto tracking-wider leading-relaxed">
