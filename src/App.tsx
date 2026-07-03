@@ -9,16 +9,17 @@ import {
   ChevronRight, 
   Menu, 
   X, 
-  Volume2, 
-  VolumeX, 
   Atom, 
   Layers, 
   ArrowUpRight 
 } from "lucide-react"
 
+import marketingImg from "@/assets/marketing_thumbnail.png"
+import developmentImg from "@/assets/development_thumbnail.png"
+import automationImg from "@/assets/automation_thumbnail.png"
+
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
   const [scrollProgress, setScrollProgress] = useState(0)
 
   useEffect(() => {
@@ -84,15 +85,8 @@ export default function App() {
             </a>
           </div>
 
-          {/* Action Button & Sound Control */}
+          {/* Action Button */}
           <div className="hidden md:flex items-center gap-4">
-            <button 
-              onClick={() => setIsMuted(!isMuted)} 
-              className="p-2 rounded-full border border-white/10 text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
-              title={isMuted ? "Unmute atmospheric background" : "Mute atmospheric background"}
-            >
-              {isMuted ? <VolumeX className="size-4" /> : <Volume2 className="size-4" />}
-            </button>
             <MetalButton variant="primary" className="text-xs h-9 px-4 rounded-full uppercase tracking-wider" onClick={() => document.getElementById('portal')?.scrollIntoView({ behavior: 'smooth' })}>
               Get Started
             </MetalButton>
@@ -100,12 +94,6 @@ export default function App() {
 
           {/* Mobile Menu Toggle */}
           <div className="flex md:hidden items-center gap-3">
-            <button 
-              onClick={() => setIsMuted(!isMuted)} 
-              className="p-2 rounded-full border border-white/10 text-zinc-400 hover:text-white"
-            >
-              {isMuted ? <VolumeX className="size-4" /> : <Volume2 className="size-4" />}
-            </button>
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
               className="p-2 text-zinc-400 hover:text-white transition-colors"
@@ -343,10 +331,14 @@ export default function App() {
           {/* Card 1 */}
           <div className="glassmorphism rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/25 transition-all duration-500 flex flex-col group">
             <div className="relative aspect-[3/4] bg-zinc-950 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10" />
-              {/* Fallback pattern representing lines */}
-              <div className="absolute inset-0 bg-[radial-gradient(#1e1b4b_1px,transparent_1px)] [background-size:16px_16px] opacity-40 group-hover:scale-110 transition-transform duration-700" />
-              <div className="size-36 rounded-full border border-purple-500/20 absolute blur-xl animate-pulse" />
+              <img 
+                src={marketingImg} 
+                alt="Performance Growth" 
+                className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700 pointer-events-none z-0"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-85 z-10" />
+              <div className="absolute inset-0 bg-[radial-gradient(#1e1b4b_1px,transparent_1px)] [background-size:16px_16px] opacity-30 group-hover:scale-110 transition-transform duration-700 z-10" />
+              <div className="size-36 rounded-full border border-purple-500/20 absolute blur-xl animate-pulse z-10" />
               
               {/* Graphic Symbol */}
               <div className="z-10 text-center px-4 space-y-3">
@@ -385,9 +377,14 @@ export default function App() {
             </div>
 
             <div className="relative aspect-[3/4] bg-zinc-950 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10" />
-              <div className="absolute inset-0 bg-[radial-gradient(#311042_1px,transparent_1px)] [background-size:16px_16px] opacity-40 group-hover:scale-110 transition-transform duration-700" />
-              <div className="size-36 rounded-full border border-pink-500/20 absolute blur-xl animate-pulse" />
+              <img 
+                src={developmentImg} 
+                alt="Interactive Web Dev" 
+                className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700 pointer-events-none z-0"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-85 z-10" />
+              <div className="absolute inset-0 bg-[radial-gradient(#311042_1px,transparent_1px)] [background-size:16px_16px] opacity-30 group-hover:scale-110 transition-transform duration-700 z-10" />
+              <div className="size-36 rounded-full border border-pink-500/20 absolute blur-xl animate-pulse z-10" />
               
               {/* Graphic Symbol */}
               <div className="z-10 text-center px-4 space-y-3">
@@ -421,9 +418,14 @@ export default function App() {
           {/* Card 3 */}
           <div className="glassmorphism rounded-2xl overflow-hidden border border-white/5 hover:border-purple-500/25 transition-all duration-500 flex flex-col group">
             <div className="relative aspect-[3/4] bg-zinc-950 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10" />
-              <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-40 group-hover:scale-110 transition-transform duration-700" />
-              <div className="size-36 rounded-full border border-white/10 absolute blur-xl animate-pulse" />
+              <img 
+                src={automationImg} 
+                alt="Workflow Automation" 
+                className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-40 group-hover:scale-110 transition-all duration-700 pointer-events-none z-0"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-85 z-10" />
+              <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-30 group-hover:scale-110 transition-transform duration-700 z-10" />
+              <div className="size-36 rounded-full border border-white/10 absolute blur-xl animate-pulse z-10" />
               
               {/* Graphic Symbol */}
               <div className="z-10 text-center px-4 space-y-3">
