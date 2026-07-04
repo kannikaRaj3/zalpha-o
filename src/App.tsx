@@ -528,24 +528,25 @@ export default function App() {
 
           <div className="relative z-10 space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-              <span className="font-brand-accent italic text-glow-purple">System Access</span>
+              <span className="font-brand-accent italic text-glow-purple">Contact Us</span>
             </h2>
             
             <p className="text-zinc-400 text-xs md:text-sm max-w-lg mx-auto tracking-wider leading-relaxed">
-              We design and execute custom strategies for selected businesses. Register your business email to schedule an intake briefing with our engineers.
+              We design and execute custom strategies for selected businesses. Send us your business email to schedule an intake briefing with our engineers.
             </p>
 
             {/* Futuristic Luxury Form */}
             <div className="max-w-md mx-auto pt-4">
-              <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row gap-3">
-                <input 
-                  type="email" 
-                  placeholder="ENTER BUSINESS EMAIL" 
+              <form action="https://formsubmit.co/kanatzalpha@gmail.com" method="POST" className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="ENTER BUSINESS EMAIL"
                   required
                   className="flex-1 px-4 py-3 bg-zinc-950/80 border border-white/10 rounded-lg text-xs font-mono tracking-widest text-white placeholder-zinc-600 focus:outline-none focus:border-purple-500 transition-colors"
                 />
-                <MetalButton variant="gold" type="submit" className="text-xs uppercase tracking-widest font-semibold h-11" onClick={() => (window as any).Calendly?.showPopupWidget('https://calendly.com/kannikaraj/30min')}>
-                  Request Key
+                <MetalButton variant="gold" type="submit" className="text-xs uppercase tracking-widest font-semibold h-11">
+                  Access
                 </MetalButton>
               </form>
               <p className="text-[9px] font-mono text-zinc-500 tracking-wider mt-4">
